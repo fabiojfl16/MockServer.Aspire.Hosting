@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>Joao Fabio Lourenco dos Santos</Authors>
+    <Description>API mocking support for .NET Aspire using MockServer.
+https://www.mock-server.com/</Description>
+    <Copyright>Copyright © Joao Fabio Lourenco dos Santos</Copyright>
+    <PackageProjectUrl>https://github.com/fabiojfl16/Aspire.Hosting.MockServer</PackageProjectUrl>
+    <PackageTags>Aspire Hosting MockServer mock api</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>MockServer.Aspire.Hosting</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting" Version="8.2.0" />
+  </ItemGroup>
+
+</Project>
