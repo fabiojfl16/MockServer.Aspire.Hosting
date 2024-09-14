@@ -8,11 +8,12 @@
     <Description>API mocking support for .NET Aspire using MockServer.
 https://www.mock-server.com/</Description>
     <Copyright>Copyright © Joao Fabio Lourenco dos Santos</Copyright>
-    <PackageProjectUrl>https://github.com/fabiojfl16/Aspire.Hosting.MockServer</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/fabiojfl16/MockServer.Aspire.Hosting</PackageProjectUrl>
     <PackageTags>Aspire Hosting MockServer mock api</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>MockServer.Aspire.Hosting</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/fabiojfl16/MockServer.Aspire.Hosting</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
