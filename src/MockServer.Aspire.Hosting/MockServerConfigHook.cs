@@ -8,15 +8,17 @@ internal class MockServerConfigHook : IDistributedApplicationLifecycleHook
 {
     public async Task AfterResourcesCreatedAsync(DistributedApplicationModel appModel, CancellationToken cancellationToken)
     {
-        var mockServerInstances = appModel.Resources.OfType<MockServerResource>();
+        var resources = appModel.Resources.OfType<MockServerResource>();
 
-        var url = "http://localhost:1080/mockserver/expectation";
         using var client = new HttpClient();
 
-        foreach (var mockServerInstance in mockServerInstances)
+        foreach (var resource in resources)
         {
-            foreach (var expectation in mockServerInstance.Expectations)
+            foreach (var expectation in resource.Expectations)
             {
+                var endpoint = resource.GetEndpoint("http");
+                var url = $"{endpoint.Url}/mockserver/expectation";
+
                 var content = new StringContent(expectation, Encoding.UTF8, "application/json");
                 await client.PutAsync(url, content, cancellationToken);
             }
