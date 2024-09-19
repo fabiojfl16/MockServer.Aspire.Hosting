@@ -4,7 +4,7 @@ using MockServer.Client.AppHost;
 var builder = DistributedApplication.CreateBuilder(args);
 
 var mockserver = builder.AddMockServer("mockserver", 1080)
-    .WithExpectation(MockServerExpectations.WheatherForecastExpectation);
+    .WithExpectations([MockServerExpectations.WheatherForecastExpectation]);
 
 builder.AddProject<Projects.MockServer_Client_Web>("webfrontend")
     .WithExternalHttpEndpoints()

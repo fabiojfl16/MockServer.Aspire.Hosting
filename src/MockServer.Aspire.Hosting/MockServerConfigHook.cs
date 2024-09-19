@@ -10,6 +10,10 @@ internal class MockServerConfigHook : IDistributedApplicationLifecycleHook
     {
         var resources = appModel.Resources.OfType<MockServerResource>();
 
+        if (!resources.Any())
+            return;
+
+        await Task.Delay(500, cancellationToken);
         using var client = new HttpClient();
 
         foreach (var resource in resources)
