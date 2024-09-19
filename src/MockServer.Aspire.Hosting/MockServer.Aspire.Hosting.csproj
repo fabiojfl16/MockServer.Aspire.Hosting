@@ -14,7 +14,7 @@ https://www.mock-server.com/</Description>
     <PackageId>MockServer.Aspire.Hosting</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/fabiojfl16/MockServer.Aspire.Hosting</RepositoryUrl>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +26,7 @@ https://www.mock-server.com/</Description>
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting" Version="8.2.0" />
+    <PackageReference Include="Polly" Version="8.4.1" />
   </ItemGroup>
 
 </Project>
